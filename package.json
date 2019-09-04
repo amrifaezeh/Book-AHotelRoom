@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && copy build doc",
+    "build": "react-scripts build && copy build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -1,31 +1,39 @@
-import React, { useState, useReducer } from "react";
+import React, { useReducer, useCallback } from "react";
 
-const ToggleButton = ({ children, className, onToggle, toggleClassName = "btn-warning" }) => {
+const ToggleButton = ({ children, className, toggleClassName = "btn-warning", onClick }) => {
     const f= ()=>{};
-    onToggle= onToggle || f;
+    onClick= onClick || f;
     const defaultButtonClass = "btn-primary";
     const defaultState = { toggle: false, buttonClass: defaultButtonClass, text: children };
-    const [button, dispatchButton] = useReducer((preState, dispatchData) => {
-
+    const reducerFunction=useCallback((preState, dispatchData) => { 
+        console.log('log');
+               
         if (!preState.toggle) {
 
             const newState = {
                 toggle: true,
                 buttonClass: toggleClassName,
-                text: (<span> {preState.text} <i class="fas fa-times-circle"></i></span>)
-            }
-            onToggle(newState.toggle);
+                text: (<span> {preState.text} <i className="fas fa-times-circle"></i></span>)
+            }            
+            onClick(newState.toggle);
             return newState;
 
         } else {
-            onToggle(defaultState.toggle);
+            
+            onClick(defaultState.toggle);
             return defaultState;
         }
-    }, defaultState);
+    },[]);
+    const [button, dispatchButton] = useReducer(reducerFunction,defaultState);
 
+    const handleClick=() =>{
+        
+        dispatchButton({ data: "hi" })
+        
+    };
     return (
-        <button class={`btn ${button.buttonClass} ${className}`}
-            onClick={() => dispatchButton({ data: "hi" })}
+        <button className={`btn ${button.buttonClass} ${className}`}
+            onClick={handleClick}
         >{button.text}</button>
     )
 }

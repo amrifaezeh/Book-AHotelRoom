@@ -21,7 +21,7 @@
     "nightlyRates" : null,
     "cancelFreeBeforeDate" : null,
     "roomCancelCharges" : [],
-    "hasBreakfast" : false,
+    "hasBreakfast" : true,
     "debugInfos" : [
       {
         "Key" : "SearchRequestId",
@@ -481,7 +481,7 @@
     "boardCode" : "1288",
     "boardCodeDescription" : "Room Only",
     "hotelId" : "FR37525",
-    "isNonRefundable" : false,
+    "isNonRefundable" : true,
     "canHoldBooking" : false,
     "facilities" : {},
     "images" : null,

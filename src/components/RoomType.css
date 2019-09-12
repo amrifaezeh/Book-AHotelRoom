@@ -8,16 +8,15 @@
 
 ul.options {
   list-style: none;
-  
 }
 
 ul.options li:before {
   content: "✓";
-  color:green;
+  color: green;
   margin-right: 5px;
 }
 ul.options li {
   display: inline;
-  padding-right:5px;
+  padding-right: 5px;
   padding-left: 10px;
 }

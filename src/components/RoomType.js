@@ -1,4 +1,4 @@
-import React, {useCallback} from "react";
+import React from "react";
 import ToggleButton from "./ToggleButton";
 import "./RoomType.css";
 
@@ -86,7 +86,7 @@ const RoomType = ({ roomType, roomsInfo, onBook }) => {
     return `${_.accommodateText} ${bedType}`
   }
 
-  const handleClick=(id, add)=>onBook(id, add);
+  const handleClick = (id, add) => onBook(id, add);
   roomType = roomType || roomsInfo[0].roomTypeLabel;
 
   return (
@@ -107,7 +107,7 @@ const RoomType = ({ roomType, roomsInfo, onBook }) => {
             </div>
             <div className="col-3 d-flex justify-content-around item p-1 align-items-center">
               {_.totalPrice}
-              <ToggleButton className="btn-sm" onClick={(add)=> handleClick(_.id, add)}>Book</ToggleButton>
+              <ToggleButton className="btn-sm" onClick={(add) => handleClick(_.id, add)}>Book</ToggleButton>
             </div>
           </div>
         )}

@@ -1,0 +1,7 @@
+.costLine {
+  border-top: 1px solid blueviolet;
+  background-color: rgba(157, 186, 211, 0.459);
+}
+.costLine .price {
+  color: blue;
+}

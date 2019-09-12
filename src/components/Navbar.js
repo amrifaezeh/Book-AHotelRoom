@@ -1,9 +1,9 @@
-import React, {useCallback} from "react";
+import React from "react";
 
-const Navbar = ({items}) => {
-    items=items|| [];
-    
-    const handleItemClick=(e, id)=>{
+const Navbar = ({ items }) => {
+    items = items || [];
+
+    const handleItemClick = (e) => {
         e.preventDefault();
         return false;
     }
@@ -14,19 +14,19 @@ const Navbar = ({items}) => {
 
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav">
-                    
+
                     <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="/"  role="button" data-toggle="dropdown" >
+                        <a className="nav-link dropdown-toggle" href="/" role="button" data-toggle="dropdown" >
                             Dropdown link  <span className="badge badge-danger">{items.length}</span>
                         </a>
                         <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        
-                            {items.map(_=>
-                                <a className="dropdown-item" key={_.id} onClick={(e)=>handleItemClick(e, _.id)} href="/">{_.name}</a>
-                                )}
-                                <hr/>
-                                <a className="dropdown-item" href="/">cost {items.reduce((p,c)=> p+c.totalPrice, 0)}</a>
-                                
+
+                            {items.map(_ =>
+                                <a className="dropdown-item" key={_.id} onClick={(e) => handleItemClick(e, _.id)} href="/">{_.name}</a>
+                            )}
+                            <hr />
+                            <a className="dropdown-item" href="/">cost {items.reduce((p, c) => p + c.totalPrice, 0)}</a>
+
                         </div>
                     </li>
                 </ul>

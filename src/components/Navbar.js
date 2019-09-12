@@ -14,7 +14,7 @@ const Navbar = ({ items }) => {
             return (
                 <div className="costLine">
                     <a className="dropdown-item d-inline-flex justify-content-between" href="/">
-                        <span>cost</span> <span className="price">{items.reduce((p, c) => p + c.totalPrice, 0)}</span>
+                        <span>cost</span> <span className="price">{items.reduce((p, c) => p + c.totalPrice, 0).toFixed(2)}</span>
                     </a>
                 </div>);
         }

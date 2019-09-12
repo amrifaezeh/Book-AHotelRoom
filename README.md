@@ -1,6 +1,13 @@
+
+## [Demo](https://amrifaezeh.github.io/Book-AHotelRoom/)
+![](./asset/booking.gif)
+
+# Requirement 
 We want to show our users who are trying to Book a hotel room, the various Room Types/Options they can choose from
-in a modular way. a Create a simple UI to Display all the different room types grouped by various Room types, as per the
-design in the wireframe shown in the bottom of this document.
+in a modular way. a Create a simple UI to Display all the different room types grouped by various Room types, as per the design in the wireframe shown in the bottom of this document.
+
+![booking-mockup](./asset/booking-mockup.png)
+
 The goal is to read the attached JSON input file and then create a web page that will:
 * Group the various rooms by room types first and Display each room type in its own ‘block’
 * Show the the various options the room type comes with inside the block assigned for the room type
@@ -15,8 +22,7 @@ The following are the Key Parameters in each Node of the JSON input they need to
 
 You can choose a Frontend framework of your choice[like REACT, VUE, ANGULAR etc.]
 
-#Optional task:
+# Optional task:
  [completing this will get special consideration]: Add functionality to send all the details about the options the room type has when the user clicks on it, to a logging component or a parent display component 
 
 
-![booking-mockup](./asset/booking-mockup.png)
